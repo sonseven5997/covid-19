@@ -18,7 +18,7 @@ const Countries = () => {
       const data = await api.getCountries();
       setCountries(data.data);
       setRecoilCountryState(
-        data.data.find((e: Country) => e.Slug == "vietnam") ??
+        data.data.find((e: Country) => e.Slug === "vietnam") ??
           defaultAtomCountry
       );
     };
@@ -39,7 +39,7 @@ const Countries = () => {
   const onChange = useCallback(
     (country: string) => {
       setRecoilCountryState(
-        countries?.find((e) => e.Slug == country) ?? defaultAtomCountry
+        countries?.find((e) => e.Slug === country) ?? defaultAtomCountry
       );
     },
     [countries, setRecoilCountryState]

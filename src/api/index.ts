@@ -1,5 +1,4 @@
 import axios from "axios";
-import dayjs from "dayjs";
 import { Country } from "../types/country";
 import { TResponseGetCases } from "../types/response";
 
