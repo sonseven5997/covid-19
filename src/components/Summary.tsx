@@ -44,6 +44,7 @@ const Summary = () => {
         );
       } else {
         setSummary(defaultSummary);
+        setChartData([]);
       }
     };
     if (!isEqual(country, defaultAtomCountry)) {
